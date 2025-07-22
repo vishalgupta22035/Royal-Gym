@@ -1,0 +1,116 @@
+/* ========== HEADER BASE STYLES ========== */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+/* ========== MENU ICON ========== */
+
+#menu-icon {
+  font-size: 3rem;
+  color: var(--main-color);
+  display: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ========== JOIN BUTTON ========== */
+
+.top-btn .nav-btn {
+  color: var(--main-color);
+  background: #000;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.top-btn .nav-btn:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+@media (max-width: 991px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 255px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    transition: all 0.5s ease;
+    padding: 3rem 2rem;
+    gap: 1.8rem;
+    overflow-y: auto;
+  }
+
+  .navbar a {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .top-btn {
+    display: none;
+  }
+
+  header {
+    padding: 2rem 5%;
+  }
+}

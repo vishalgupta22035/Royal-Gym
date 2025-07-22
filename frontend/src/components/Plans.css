@@ -1,0 +1,72 @@
+/* Plans.css */
+
+.plans {
+  background: var(--snd-bg-color);
+  padding: 6rem 8% 4rem;
+}
+
+.plans .heading {
+  text-align: center;
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+
+.heading span{ 
+  color: var(--main-color);
+}
+
+.plans-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.box {
+  background: var(--bg-color);
+  border-radius: 20px;
+  box-shadow: 0 0 5px var(--main-color);
+  padding: 30px;
+  text-align: center;
+  justify-content: center;
+  transition: 0.4s ease;
+}
+
+.box:hover{
+  transform: translateY(-5px) scale(1.03);
+  border: 1px solid var(--main-color);
+}
+
+.box h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.box h2 span {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.box ul {
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.box ul li {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  list-style: disc;
+}
+
+.box a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--text-color);
+  border-bottom: 2px solid #5d6c83;
+  transition: all 0.3s ease;
+}
+
+.box a:hover {
+  transform: scale(1.03);
+  border-color: var(--main-color);
+}
