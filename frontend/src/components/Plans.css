@@ -12,7 +12,7 @@
   color: var(--text-color);
 }
 
-.heading span{ 
+.heading span {
   color: var(--main-color);
 }
 
@@ -20,6 +20,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
 .box {
@@ -28,11 +29,15 @@
   box-shadow: 0 0 5px var(--main-color);
   padding: 30px;
   text-align: center;
-  justify-content: center;
   transition: 0.4s ease;
+
+  /* New */
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
 }
 
-.box:hover{
+.box:hover {
   transform: translateY(-5px) scale(1.03);
   border: 1px solid var(--main-color);
 }
@@ -42,31 +47,45 @@
   margin-bottom: 1rem;
 }
 
+.box h2 {
+  margin-bottom: 1rem;
+}
+
 .box h2 span {
   font-size: 3rem;
   color: var(--main-color);
 }
 
 .box ul {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2rem;
   text-align: left;
+  padding-left: 1.5rem;
 }
 
 .box ul li {
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
   list-style: disc;
 }
 
 .box a {
+  margin-top: auto;
+  align-self: center;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
   font-size: 1.6rem;
   text-decoration: none;
   color: var(--text-color);
   border-bottom: 2px solid #5d6c83;
+  padding-bottom: 4px;
   transition: all 0.3s ease;
 }
 
 .box a:hover {
-  transform: scale(1.03);
+  color: var(--main-color);
   border-color: var(--main-color);
+  transform: scale(1.05);
 }
