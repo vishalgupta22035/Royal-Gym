@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import './AuthForm.css';
 
 const Register = ({ onSwitch }) => {
@@ -12,7 +12,7 @@ const Register = ({ onSwitch }) => {
   const handleRegister = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/register', formData);
+      const res = await api.post('/users/register', formData);
       alert('Registration successful! You can now log in.');
       onSwitch(); // Switch to login
     } catch (err) {

@@ -1,4 +1,4 @@
-import axios from 'axios';
+import api from '../api';
 import React, { useState } from 'react';
 import './JoinForm.css';
 
@@ -16,7 +16,7 @@ const JoinForm = ({ onClose }) => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/join', formData);
+      await api.post('/join', formData);
       alert(`Thanks ${formData.name}! We’ll contact you soon.`);
       onClose();
     } catch (error) {

@@ -1,6 +1,6 @@
 // src/pages/Login.js
 import React, { useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import './AuthForm.css';
 
 const Login = ({ onSwitch, onLoginSuccess }) => {
@@ -13,7 +13,7 @@ const Login = ({ onSwitch, onLoginSuccess }) => {
   const handleLogin = async e => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/users/login', formData);
+      const res = await api.post('/users/login', formData);
 
       // ✅ Redirect to main site
       onLoginSuccess(res.data.user); // passes user back to App

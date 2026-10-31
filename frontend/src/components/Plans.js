@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import './Plans.css';
 
 const Plans = ({ onJoinClick }) => {
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('http://localhost:5000/api/plans')
+    api
+      .get('/plans')
       .then((res) => setPlans(res.data))
       .catch((err) => console.error('Error fetching plans:', err));
   }, []);

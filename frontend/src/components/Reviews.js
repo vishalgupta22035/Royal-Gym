@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import api from '../api';
 import './Reviews.css';
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/reviews')
+    api.get('/reviews')
       .then((res) => setReviews(res.data))
       .catch((err) => console.error('Error fetching reviews:', err));
   }, []);
